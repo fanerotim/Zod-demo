@@ -1,0 +1,16 @@
+{
+  "name": "zod-demo",
+  "version": "1.0.0",
+  "description": "A simple demo of a web form, which will be used to practice Zod library",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zod": "^4.3.6"
+  }
+}
