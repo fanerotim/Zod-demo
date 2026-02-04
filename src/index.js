@@ -10,5 +10,8 @@ form.onsubmit = function (e) {
     const text = form.elements[1].value;
     // pass input to validator
     const isValid = validator({ author, text });
+    if (!isValid) {
+        console.log(isValid);
+    }
 };
 //# sourceMappingURL=index.js.map

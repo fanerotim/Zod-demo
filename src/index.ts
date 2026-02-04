@@ -11,4 +11,8 @@ form.onsubmit = function(e) {
     const text = (form.elements[1] as HTMLInputElement).value;
     // pass input to validator
     const isValid = validator({author, text});
+    
+    if (!isValid) {
+        console.log(isValid);
+    }
 }
