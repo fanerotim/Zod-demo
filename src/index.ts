@@ -1,4 +1,4 @@
-import { validator } from "./utils/valitaror.js";
+import { validator } from "./utils/validator/valitaror.js";
 
 // get form
 const form = document.querySelector('form')!;
@@ -10,9 +10,5 @@ form.onsubmit = function(e) {
     const author = (form.elements[0] as HTMLInputElement).value;
     const text = (form.elements[1] as HTMLInputElement).value;
     // pass input to validator
-    const isValid = validator({author, text});
-    
-    if (!isValid) {
-        console.log(isValid);
-    }
+    validator({author, text});
 }
