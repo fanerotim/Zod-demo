@@ -1,5 +1,14 @@
-import { validator } from './utils/valitaror.js';
+import { validator } from "./utils/valitaror.js";
 
-const heading = document.getElementById('heading')!;
-heading.innerText = 'New text'
-validator({author: 'Test', text: 'Testing'});
+// get form
+const form = document.querySelector('form')!;
+// attach a click event listener
+form.onsubmit = function(e) {
+    // prevent default behavior
+    e.preventDefault();
+    // get uset input
+    const author = (form.elements[0] as HTMLInputElement).value;
+    const text = (form.elements[1] as HTMLInputElement).value;
+    // pass input to validator
+    const isValid = validator({author, text});
+}
