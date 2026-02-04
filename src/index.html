@@ -1,14 +1,31 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zod demo</title>
+    <link rel="stylesheet" href="style.css">
     <script type="module" src="./index.js" async></script>
 </head>
+
 <body>
-    <script>
-        var exports = {};
-    </script>
     <h1 id="heading">Zod demo</h1>
+
+    <form>
+        <div class="field__container">
+            <label for="author">
+                Author
+            </label>
+            <input type="text" placeholder="e.g. Jon Doe..." id="author">
+        </div>
+
+        <div class="field__container">
+            <label for="text">Text</label>
+            <textarea size="80%" name="text" id="text" placeholder="Enter text...">
+            </textarea>
+        </div>
+        <input type="submit">
+    </form>
 </body>
+
 </html>
