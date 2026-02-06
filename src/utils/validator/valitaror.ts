@@ -2,6 +2,7 @@ import { ZodError } from '../../../node_modules/zod/index.js';
 import { z } from '../../../node_modules/zod/index.js';
 import { type UserInput } from '../../types/userInput.js';
 import { showError } from '../show-error/showError.js';
+import { showSuccess } from '../show-success/showSuccess.js';
 
 // create schema
 const Schema = z.object({
@@ -12,9 +13,11 @@ const Schema = z.object({
 export const validator = (userInput: UserInput) => {
     
     try {
-        // have not handled success case
+        // show success message if form is submitted successfully
         const result = Schema.parse(userInput);
+        showSuccess(result);
     } catch(err) { 
+        // show error message if form submission fails
         showError(err as ZodError)
     }
 }
