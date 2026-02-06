@@ -10,7 +10,7 @@ export const showSuccess = (result) => {
     form.replaceWith(paragraph);
     // create a back button, so we can show form again
     const button = document.createElement('button');
-    button.textContent = 'Fill the form again';
+    button.textContent = 'Fill in the form again';
     button.style.display = 'block';
     button.style.margin = '2rem auto';
     paragraph.append(button);
@@ -23,14 +23,22 @@ export const showSuccess = (result) => {
     const container = document.getElementById('container');
     // create a div wrapper for each newly entered input
     const div = document.createElement('div');
+    div.style.backgroundColor = 'lightgreen';
+    div.style.padding = '1rem';
+    div.style.borderRadius = '.1rem';
     // store entered by the user text in an <h3> element
     const text = document.createElement('h3');
     text.textContent = result.text;
+    text.style.textAlign = 'center';
     // author stored in a <p> element
     const author = document.createElement('p');
     author.textContent = result.author;
+    author.style.textAlign = 'right';
+    author.style.fontSize = '.7rem';
     // add both text and author to their div container
     div.style.margin = '0 auto';
+    div.style.width = '90%';
+    div.style.maxWidth = '500px';
     div.append(text, author);
     // and append the div container to the container
     container.append(div);

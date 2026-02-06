@@ -41,3 +41,8 @@ input[type="submit"] {
     margin-top: 2rem;
     cursor: pointer;
 }
+
+#container {
+    display: flex;
+    margin-top: 5rem;
+}
