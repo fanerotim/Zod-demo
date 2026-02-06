@@ -1,6 +1,6 @@
 ;
 export const showError = (error) => {
-    // transoform error data, so we can obtain the information needed to show errors
+    // transform error data, so we can obtain the information needed to show errors
     const errorValues = Object.values(error)[1];
     const errorData = JSON.parse(errorValues);
     for (let data of errorData) {

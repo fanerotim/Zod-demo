@@ -1,7 +1,7 @@
 import type { ZodError } from '../../../node_modules/zod/index.js';;
 
 export const showError = (error: ZodError) => {
-    // transoform error data, so we can obtain the information needed to show errors
+    // transform error data, so we can obtain the information needed to show errors
     const errorValues = Object.values(error)[1]!;
     const errorData = JSON.parse(errorValues as string);
 
