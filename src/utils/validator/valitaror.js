@@ -9,6 +9,13 @@ const Schema = z.object({
     text: z.string().trim().min(10, { message: 'Minimum length is 10 characters' }).max(100, { message: 'Maximum length is 100 characters!' })
 });
 export const validator = (userInput) => {
+    // before validating user input, remove any previous error message if there are such
+    const errorParagraphs = Array.from(document.querySelectorAll('p'));
+    if (errorParagraphs.length > 0) {
+        for (let p of errorParagraphs) {
+            p.remove();
+        }
+    }
     try {
         // show success message if form is submitted successfully
         const result = Schema.parse(userInput);
